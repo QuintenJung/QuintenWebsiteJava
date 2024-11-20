@@ -120,15 +120,6 @@ html[id=interview]{
         background-color: var(--background);
         border: 10px solid black;
         border-radius: 15px;
-        /* img{
-            background-color: var(--background);
-            border: 10px solid black;
-            border-radius: 15px;
-            width: 90%;
-            padding: 0;
-            margin: 4%;
-            height: 500px;
-        } */
     }
 }
 html[id=social] main{
@@ -201,11 +192,8 @@ html[id=inlog] main{
     }
     input[type=submit]{
         width: 50%;
-        margin: 0px 25% 0 25%;
+        margin: 25px 25% 0 25%;
         background-color: rgb(0, 255, 0);
-    }
-    input[type=submit]:hover{
-        background-color: rgb(0, 186, 0);
     }
 }
 html[id=me]{

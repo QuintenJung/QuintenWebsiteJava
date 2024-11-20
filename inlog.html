@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" id="inlog">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inlog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/back.png" alt="back"></a>
+        <p>Inlog</p>
+    </header>
+
+    <main>
+        <form action="inlog2.html">
+            <div>
+                <label>voornaam*</label>
+                <label>achternaam*</label>
+                <label>Gebortendatum</label>
+                <label>terms*</label>
+                <input type="text" name="firstname" id="firstname" required autofocus>
+                <input type="text" name="lastname" id="lastname" required>
+                <input type="date" name="age" id="age">
+                <input type="checkbox" name="terms" id="terms" onclick="myFunction()">
+            </div>
+            <p>*required</p>
+            <input id="submit" style="display:none" type="submit">
+        </form>
+    </main>
+
+    <script>
+        function myFunction() {
+          var checkBox = document.getElementById("terms");
+          var submit = document.getElementById("submit");
+          if (checkBox.checked == true){
+            submit.style.display = "block";
+          } else {
+            submit.style.display = "none";
+          }
+        }
+    </script>
+
+</body>
+</html> 

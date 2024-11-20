@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" id="inlog2">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeloged</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>  
+    <header>
+        <a href="inlog.html"><img src="img/back.png" alt="back"></a>
+        <p>Ingeloged</p>
+    </header>
+    <main>`
+        <p id="naam">Bedankt voor het inloggen, </p>
+        <p>Er word niks met deze info gedaan.</p>
+        <p id="secret"></p>
+        <a href="index.html" id="button">Terug naar begin.</a>
+
+    </main>
+    <script>
+        let text = window.location.href
+        let split = text.split("?")[1].split("&")
+        let firstname = split[0].split("=")[1]
+        let lastname = split[1].split("=")[1]
+        var button = document.getElementById("button")
+        document.getElementById("naam").innerHTML = "Bedankt voor het inloggen, " + firstname + " " + lastname + ".";
+        if (firstname == "Quinten") {
+            if (lastname == "Jungschlager") {
+                document.getElementById("secret").innerHTML ="Hoe gaat de Presentatie?"
+                button.style.marginTop = "150px"
+            }
+        }
+    </script>  
+</body>
+</html>

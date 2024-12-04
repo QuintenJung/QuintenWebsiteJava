@@ -1,4 +1,3 @@
-
 function cookies_deny() {
     let cookiesMelding = document.getElementById("cookies")
     console.info("cookies: deny")
@@ -8,7 +7,14 @@ function cookies_accept() {
     let cookiesMelding = document.getElementById("cookies")
     console.info("cookies: accept")
     cookiesMelding.style.display = "none"
+    document.cookie = "cookie = true"
 }
+function cookie_melding() {
+    if (getCookie("cookie") == "true") {
+        cookies_accept()
+    }
+}
+//voor button in inlog
 function myFunction() {
     var checkBox = document.getElementById("terms");
     var submit = document.getElementById("submit");
@@ -29,3 +35,16 @@ function load_melding() {
     var button = document.getElementById("button")
     document.getElementById("naam").innerHTML = "Bedankt voor het inloggen, " + firstname + " " + lastname + ".";
 }
+function getCookie(cname) {
+    let name = cname + "=";
+    let splitCookie = document.cookie.split(';')
+    for(let i = 0; i <splitCookie.length; i++) {
+      let x = splitCookie[i]
+      while (x.charAt(0) == ' ') {
+        x = x.substring(1)
+      }
+      if (x.indexOf(name) == 0) {
+        return x.substring(name.length, x.length)
+      }
+    }
+  }

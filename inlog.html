@@ -30,21 +30,7 @@
         </form>
     </main>
 
-    <script>
-        myFunction()
-        function myFunction() {
-            var checkBox = document.getElementById("terms");
-            var submit = document.getElementById("submit");
-            var firstname = document.getElementById("firstname");
-            var lastname = document.getElementById("lastname");
-            console.info(checkBox.checked)
-            if (checkBox.checked == true & firstname.value != "" & lastname.value != "") {
-                submit.style.backgroundColor = "rgb(0, 255, 0)";
-            } else {
-                submit.style.backgroundColor = "rgb(128, 128, 128)";
-            }
-        }
-    </script>
+    <script src="script.js" onload="myFunction()"></script>
 
 </body>
 

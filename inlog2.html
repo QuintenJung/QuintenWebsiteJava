@@ -15,15 +15,7 @@
         <p id="naam">Bedankt voor het inloggen, </p>
         <p>Er word niks met deze info gedaan.</p>
         <a href="index.html" id="button">Terug naar begin.</a>
-
     </main>
-    <script>
-        let text = window.location.href
-        let split = text.split("?")[1].split("&")
-        let firstname = split[0].split("=")[1]
-        let lastname = split[1].split("=")[1]
-        var button = document.getElementById("button")
-        document.getElementById("naam").innerHTML = "Bedankt voor het inloggen, " + firstname + " " + lastname + ".";
-    </script>  
+    <script src="script.js" onload="load_melding()"></script>  
 </body>
 </html>

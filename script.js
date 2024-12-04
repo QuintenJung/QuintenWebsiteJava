@@ -32,7 +32,6 @@ function load_melding() {
     let split = text.split("?")[1].split("&")
     let firstname = split[0].split("=")[1]
     let lastname = split[1].split("=")[1]
-    var button = document.getElementById("button")
     document.getElementById("naam").innerHTML = "Bedankt voor het inloggen, " + firstname + " " + lastname + ".";
 }
 function getCookie(cname) {

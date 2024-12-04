@@ -1,7 +1,7 @@
 [waar; hoelang] wat.
 
-1. [all; M] dark mode maken.
-2. [index; M] cookie maken.
+1. [all; M] dark mode maken. 
+2. [index; M] cookie maken. done!
 3. [inlog2; S] tijdgebonden begroeting.
 4. [all; L] website responsive (tel) maken.
 5. [all; L] hamburgermenu bouwen.

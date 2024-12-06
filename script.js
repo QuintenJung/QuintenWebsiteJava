@@ -1,3 +1,14 @@
+function load() {
+    console.info("script loaded")
+    if (getCookie("cookie") == "true") {
+        if (getCookie("darkmode") == "true") {
+            dark_mode(false)
+        } else {
+            dark_mode(true)
+        }
+    }
+
+}
 function cookies_deny() {
     let cookiesMelding = document.getElementById("cookies")
     console.info("cookies: deny")
@@ -7,7 +18,7 @@ function cookies_accept() {
     let cookiesMelding = document.getElementById("cookies")
     console.info("cookies: accept")
     cookiesMelding.style.display = "none"
-    document.cookie = "cookie = true"
+    setCookie("cookie", "true")
 }
 function cookie_melding() {
     if (getCookie("cookie") == "true") {
@@ -37,13 +48,37 @@ function load_melding() {
 function getCookie(cname) {
     let name = cname + "=";
     let splitCookie = document.cookie.split(';')
-    for(let i = 0; i <splitCookie.length; i++) {
-      let x = splitCookie[i]
-      while (x.charAt(0) == ' ') {
-        x = x.substring(1)
-      }
-      if (x.indexOf(name) == 0) {
-        return x.substring(name.length, x.length)
-      }
+    for (let i = 0; i < splitCookie.length; i++) {
+        let x = splitCookie[i]
+        while (x.charAt(0) == ' ') {
+            x = x.substring(1)
+        }
+        if (x.indexOf(name) == 0) {
+            return x.substring(name.length, x.length)
+        }
     }
-  }
+}
+function setCookie(name, value) {
+    document.cookie = name + "=" + value
+}
+function dark_mode(toggle) {
+    if (toggle == undefined) {
+        // console.info((document.documentElement.style.getPropertyValue("--html") == "white"))
+        toggle = (document.documentElement.style.getPropertyValue("--html") == "#5a5a5a")
+    }
+    if (toggle == true) {
+        document.documentElement.style.setProperty('--html', 'white');
+        document.documentElement.style.setProperty('--background', '#AFBEC5');
+        if (getCookie("cookie") == "true") {
+            setCookie("darkmode", "false")
+        }
+        console.info("dark mode off")
+    } else {
+        document.documentElement.style.setProperty('--html', '#5a5a5a');
+        document.documentElement.style.setProperty('--background', '#557483');
+        if (getCookie("cookie") == "true") {
+            setCookie("darkmode", "true")
+        }
+        console.info("dark mode on")
+    }
+}

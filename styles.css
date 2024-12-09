@@ -2,7 +2,7 @@
 /*voor alles*/
 :root {
     --background: #AFBEC5;
-    --html: white
+    --html: "white"
 }
 
 html {
@@ -385,6 +385,7 @@ html[id=me] {
             section{
                 width: 80%;
                 margin: auto;
+                font-size: 20px;
             }
         }
     }

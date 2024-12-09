@@ -75,7 +75,7 @@ function setCookie(name, value) {
 function dark_mode(toggle) {
     if (toggle == undefined) {
         // console.info((document.documentElement.style.getPropertyValue("--html") == "white"))
-        toggle = (document.documentElement.style.getPropertyValue("--html") == "#5a5a5a")
+        toggle = (document.documentElement.style.getPropertyValue("--html") == "#7A8C94")
     }
     if (toggle == true) {
         document.documentElement.style.setProperty('--html', 'white');

@@ -43,7 +43,18 @@ function load_melding() {
     let split = text.split("?")[1].split("&")
     let firstname = split[0].split("=")[1]
     let lastname = split[1].split("=")[1]
-    document.getElementById("naam").innerHTML = "Bedankt voor het inloggen, " + firstname + " " + lastname + ".";
+    let time = new Date().getHours()
+    console.info("time;" + time)
+    if (time < 6) {
+        document.getElementById("naam").innerHTML = "Goedenacht, "
+    } else if (time < 12) {
+        document.getElementById("naam").innerHTML = "Goedemorgen, "
+    } else if (time < 18) {
+        document.getElementById("naam").innerHTML = "Goedemiddag, "
+    } else {
+        document.getElementById("naam").innerHTML = "Goedenavond, "
+    }
+    document.getElementById("naam").innerHTML += firstname + " " + lastname + "."
 }
 function getCookie(cname) {
     let name = cname + "=";

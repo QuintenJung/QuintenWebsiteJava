@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <p>Portfolio Quinten Jungschlager</p>
+        <p>Portfolio</p>
         <img src="img/dark-mode.png" class="darkmode" onclick="dark_mode()">
     </header>
     <main>
@@ -43,11 +43,11 @@
             </a>
         </nav>
     </main>
-    <section id="cookies">
+    <footer id="cookies">
         <p>cookies?</p>
-        <button onclick="cookies_accept()">accept</button>
-        <button onclick="cookies_deny()">deny</button>
-    </section>
+        <button class="cookies_button_left" onclick="cookies_accept()">accept</button>
+        <button class="cookies_button_right" onclick="cookies_deny()">deny</button>
+    </footer>
     <script src="script.js" onload="cookie_melding(), load()"></script>
 </body>
 

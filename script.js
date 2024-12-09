@@ -32,7 +32,7 @@ function myFunction() {
     var firstname = document.getElementById("firstname");
     var lastname = document.getElementById("lastname");
     console.info(checkBox.checked)
-    if (checkBox.checked == true & firstname.value != "" & lastname.value != "") {
+    if (checkBox.checked == true && firstname.value != "" && lastname.value != "") {
         submit.style.backgroundColor = "rgb(0, 255, 0)";
     } else {
         submit.style.backgroundColor = "rgb(128, 128, 128)";
@@ -85,8 +85,9 @@ function dark_mode(toggle) {
         }
         console.info("dark mode off")
     } else {
-        document.documentElement.style.setProperty('--html', '#5a5a5a');
-        document.documentElement.style.setProperty('--background', '#557483');
+        //dark mode
+        document.documentElement.style.setProperty('--html', '#3A4A64');
+        document.documentElement.style.setProperty('--background', '#7A8C94');
         if (getCookie("cookie") == "true") {
             setCookie("darkmode", "true")
         }

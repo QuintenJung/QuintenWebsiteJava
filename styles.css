@@ -1,56 +1,85 @@
+/*@media only screen and (max-width: 620px) {}*/
+/*voor alles*/
 :root {
     --background: #AFBEC5;
     --html: white
 }
+
 html {
     background-color: var(--html);
 }
+
+body {
+    margin: 0;
+}
+
 header {
     background-color: var(--background);
-    border-radius: 15px;
-    border: 10px solid black;
+    border-bottom: 10px solid black;
     margin: 0;
     margin-bottom: 30px;
     height: 100px;
-}
 
-.darkmode {
-    position: absolute;
-    top: 40px;
-    right: 50px;
-    height: 50px;
-    width: 50px;
-}
+    p {
+        position: absolute;
+        top: 20px;
+        left: 150px;
+        padding: 0;
+        margin: 0;
+        font-size: 50px;
+        width: 750px;
+    }
 
-h1 {
-    width: 75%;
-    text-align: center;
-    height: 35px;
-    margin: 10px auto;
-    border-radius: 15px;
-    border: 4px solid black;
-    padding-top: 5px;
-    background-color: var(--html);
-    font-size: 25px;
-    text-decoration: none;
-}
 
-header p {
-    padding: 0;
-    margin: 21px 0 0 150px;
-    font-size: 50px;
-    width: 750px;
-}
+    a {
+        img {
+            position: absolute;
+            left: 10px;
+            width: 100px;
+        }
+    }
 
-header a {
-    float: left;
+    .darkmode {
+        position: absolute;
+        top: 25px;
+        right: 50px;
+        height: 50px;
+        width: 50px;
+    }
 
-    img {
-        width: 100px;
-        margin-left: 10px;
+    /*telefoon*/
+    @media only screen and (max-width: 620px) {
+        height: 100px;
+        width: 100%;
+        line-height: 100px;
+
+        p {
+            font-size: 30px;
+            width: 50%;
+            top: 0;
+            left: 25%;
+            text-align: center;
+        }
+
+        a {
+            img {
+                height: 75px;
+                width: 75px;
+                top: 10px;
+                left: 15px;
+            }
+        }
+
+        .darkmode {
+            top: 30px;
+            right: 30px;
+        }
     }
 }
 
+
+
+/*index*/
 html[id=index] {
     main {
         display: flex;
@@ -60,6 +89,7 @@ html[id=index] {
         align-items: stretch;
         align-content: stretch;
         height: auto;
+
 
         section,
         nav {
@@ -95,10 +125,77 @@ html[id=index] {
                 text-align: center;
                 font-size: larger;
             }
+
+            h1 {
+                width: 75%;
+                text-align: center;
+                height: 35px;
+                margin: 10px auto;
+                border-radius: 15px;
+                border: 4px solid black;
+                padding-top: 5px;
+                background-color: var(--html);
+                font-size: 25px;
+                text-decoration: none;
+            }
+        }
+
+        @media only screen and (max-width: 620px) {
+            flex-direction: column;
+
+            section {
+                width: 75%;
+                margin: auto;
+            }
+
+            nav {
+                width: 100%;
+                border: none;
+                border-radius: 0;
+                margin-top: 20px;
+                border-top: 10px solid black;
+            }
+        }
+    }
+
+
+    footer {
+        border: 10px solid black;
+        border-radius: 15px;
+        background-color: var(--background);
+        position: fixed;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+
+        p {
+            width: 100%;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .cookies_button_left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 20%;
+            font-size: 25px;
+        }
+
+        .cookies_button_right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 20%;
+            font-size: 25px;
         }
     }
 }
 
+/*projecten*/
 html[id=projecten] main {
 
     .section_left,
@@ -124,10 +221,11 @@ html[id=projecten] main {
     }
 }
 
+/*hobby*/
 html[id=hobby] main {
     section {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: 25px 0 25px 0;
 
         p {
@@ -150,14 +248,17 @@ html[id=hobby] main {
     }
 }
 
+/*interview*/
 html[id=interview] {
     main {
         background-color: var(--background);
         border: 10px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
 }
 
+/*social*/
 html[id=social] main {
     section {
         margin: 0 5% 5% 5%;
@@ -180,6 +281,7 @@ html[id=social] main {
     }
 }
 
+/*inlog*/
 html[id=inlog] main {
     width: 50%;
     background-color: var(--background);
@@ -245,12 +347,13 @@ html[id=inlog] main {
     }
 }
 
+/*me*/
 html[id=me] {
     main {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: stretch;
         align-content: stretch;
 
@@ -259,10 +362,7 @@ html[id=me] {
             border-radius: 15px;
             border: 10px solid black;
             width: 47%;
-        }
-
-        p {
-            margin: 10px;
+            padding: 10px;
             font-size: 30px;
         }
 
@@ -271,15 +371,29 @@ html[id=me] {
             border-radius: 15px;
             border: 10px solid black;
             width: 47%;
+            padding: 10px;
+        }
+
+        @media only screen and (max-width: 620px){
+            flex-direction: column;
+
+            img{
+                width: 80%;
+                margin: auto;
+                margin-bottom: 10px;
+            }
+            section{
+                width: 80%;
+                margin: auto;
+            }
         }
     }
 
     footer {
         background-color: var(--background);
-        border: 10px solid black;
-        border-radius: 15px;
-        margin-top: 20px;
-        padding: 5pxs;
+        border-top: 10px solid black;
+        margin-top: 25px;
+        padding: 5px;
 
         p {
             margin: 2.5px 10px 2.5px 10px;
@@ -287,6 +401,7 @@ html[id=me] {
     }
 }
 
+/*inlog2*/
 html[id=inlog2] {
     main {
         background-color: var(--background);
@@ -312,27 +427,5 @@ html[id=inlog2] {
         p {
             font-size: 25px;
         }
-    }
-}
-
-#cookies {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--background);
-    border-top: 10px solid black;
-
-    p {
-        font-size: 40px;
-        margin: 10px;
-        width: 60%;
-    }
-
-    button {
-        width: 20%;
-        font-size: 30px;
     }
 }

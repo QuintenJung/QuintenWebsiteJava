@@ -197,18 +197,6 @@ html[id=index] {
 
 /*projecten*/
 html[id=projecten] main {
-
-    .section_left,
-    .section_right {
-        display: flex;
-        width: 90%;
-        background-color: var(--background);
-        border: 10px solid black;
-        border-radius: 15px;
-        padding: 10px;
-        margin: 5%;
-    }
-
     p {
         margin: 0 5%;
         width: 70%;
@@ -244,6 +232,14 @@ html[id=hobby] main {
             border: 10px solid black;
             border-radius: 15px;
             width: 20%;
+        }
+
+        @media only screen and (max-width: 620px) {
+            flex-direction: column;
+
+            img {
+                display: none;
+            }
         }
     }
 }
@@ -374,15 +370,16 @@ html[id=me] {
             padding: 10px;
         }
 
-        @media only screen and (max-width: 620px){
+        @media only screen and (max-width: 620px) {
             flex-direction: column;
 
-            img{
+            img {
                 width: 80%;
                 margin: auto;
                 margin-bottom: 10px;
             }
-            section{
+
+            section {
                 width: 80%;
                 margin: auto;
                 font-size: 20px;

@@ -76,17 +76,8 @@ function setCookie(name, value) {
 }
 function dark_mode(toggle) {
     if (toggle == undefined) {
-        if (getCookie("darkmode") == "true") {
-            toggle = true
-        } else if (getCookie("cookie") == "true") {
-            toggle = false
-        } else {
-            toggle = (document.documentElement.style.getPropertyValue("--html") == "#3A4A64")
-        }
-        console.info("toggle;" + toggle)
+        toggle = (document.documentElement.style.getPropertyValue("--html") == "#3A4A64")
     }
-    console.info("toggle;" + toggle)
-
     if (toggle == true) {
         document.documentElement.style.setProperty('--html', 'white');
         document.documentElement.style.setProperty('--background', '#AFBEC5');

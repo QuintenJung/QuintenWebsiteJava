@@ -228,6 +228,7 @@ html[id=hobby] main {
 
             @media only screen and (max-width: 620px) {
                 font-size: 20px;
+                margin: auto;
             }
         }
 
@@ -244,12 +245,6 @@ html[id=hobby] main {
             img {
                 display: none;
             }
-        }
-    }
-
-    @media only screen and (max-width: 620px) {
-        img {
-            display: none;
         }
     }
 }

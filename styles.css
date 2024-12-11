@@ -2,7 +2,7 @@
 /*voor alles*/
 :root {
     --background: #AFBEC5;
-    --html: white
+    --html: "white"
 }
 
 html {
@@ -197,18 +197,6 @@ html[id=index] {
 
 /*projecten*/
 html[id=projecten] main {
-
-    .section_left,
-    .section_right {
-        display: flex;
-        width: 90%;
-        background-color: var(--background);
-        border: 10px solid black;
-        border-radius: 15px;
-        padding: 10px;
-        margin: 5%;
-    }
-
     p {
         margin: 0 5%;
         width: 70%;
@@ -248,6 +236,14 @@ html[id=hobby] main {
             border: 10px solid black;
             border-radius: 15px;
             width: 20%;
+        }
+
+        @media only screen and (max-width: 620px) {
+            flex-direction: column;
+
+            img {
+                display: none;
+            }
         }
     }
 
@@ -410,6 +406,7 @@ html[id=me] {
             section {
                 width: 80%;
                 margin: auto;
+                font-size: 20px;
             }
         }
     }

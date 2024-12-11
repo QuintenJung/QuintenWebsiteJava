@@ -7,7 +7,6 @@ function load() {
             dark_mode(false)
         }
     }
-    menu_setup()
 }
 function cookies_deny() {
     let cookiesMelding = document.getElementById("cookies")

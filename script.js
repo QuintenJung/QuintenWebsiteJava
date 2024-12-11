@@ -31,7 +31,7 @@ function myFunction() {
     var submit = document.getElementById("submit");
     var firstname = document.getElementById("firstname");
     var lastname = document.getElementById("lastname");
-    console.info( "checkBox;" + checkBox.checked)
+    console.info("checkBox;" + checkBox.checked)
     if (checkBox.checked == true && firstname.value != "" && lastname.value != "") {
         submit.style.backgroundColor = "rgb(0, 255, 0)";
     } else {
@@ -70,10 +70,12 @@ function getCookie(cname) {
     }
 }
 function setCookie(name, value) {
-    document.cookie = name + "=" + value
+    if (getCookie("cookie") == "true") {
+        document.cookie = name + "=" + value
+    }
 }
 function dark_mode(toggle) {
-    if (toggle == undefined) {
+    if (toggle == "") {
         if (getCookie("darkmode") == "true") {
             toggle = true
         } else if (getCookie("cookie") == "true") {
@@ -81,7 +83,10 @@ function dark_mode(toggle) {
         } else {
             toggle = (document.documentElement.style.getPropertyValue("--html") == "#3A4A64")
         }
+        console.info("toggle;" + toggle)
     }
+    console.info("toggle;" + toggle)
+
     if (toggle == true) {
         document.documentElement.style.setProperty('--html', 'white');
         document.documentElement.style.setProperty('--background', '#AFBEC5');
@@ -99,3 +104,4 @@ function dark_mode(toggle) {
         console.info("dark mode on")
     }
 }
+

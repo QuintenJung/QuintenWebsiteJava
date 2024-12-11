@@ -47,6 +47,30 @@ header {
         width: 50px;
     }
 
+    #menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100px;
+    }
+
+    nav {
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        gap: 0;
+        background-color: rgb(110, 110, 110);
+
+        a {
+            border: 2px solid black;
+            font-size: 20px;
+            padding-left: 20px;
+            height: 25px;
+        }
+    }
+
     /*telefoon*/
     @media only screen and (max-width: 620px) {
         height: 100px;
@@ -76,7 +100,6 @@ header {
         }
     }
 }
-
 
 
 /*index*/
@@ -125,7 +148,7 @@ html[id=index] {
                 text-align: center;
                 font-size: larger;
             }
- 
+
             h1 {
                 width: 75%;
                 text-align: center;
@@ -219,12 +242,15 @@ html[id=projecten] main {
         width: 20%;
         margin-left: 10px;
     }
-    @media only screen and (max-width: 620px){
+
+    @media only screen and (max-width: 620px) {
         width: 90%;
-        img{
+
+        img {
             display: none;
         }
-        p{
+
+        p {
             width: auto;
         }
 

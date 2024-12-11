@@ -7,7 +7,7 @@ function load() {
             dark_mode(false)
         }
     }
-
+    menu_setup()
 }
 function cookies_deny() {
     let cookiesMelding = document.getElementById("cookies")
@@ -91,4 +91,19 @@ function dark_mode(toggle) {
         console.info("dark mode on")
     }
 }
+
+function menu() {
+    let nav = document.getElementById("menu_nav")
+    if (nav.style.display == "none") {
+        nav.style.display = "grid"
+    } else {
+        nav.style.display = "none"
+    }
+}
+
+
+
+
+
+
 

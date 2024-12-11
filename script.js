@@ -75,7 +75,7 @@ function setCookie(name, value) {
     }
 }
 function dark_mode(toggle) {
-    if (toggle == "") {
+    if (toggle == undefined) {
         if (getCookie("darkmode") == "true") {
             toggle = true
         } else if (getCookie("cookie") == "true") {

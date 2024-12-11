@@ -237,6 +237,10 @@ html[id=hobby] main {
             padding: 10px;
             font-size: 30px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            @media only screen and (max-width: 620px) {
+                font-size: 20px;
+            }
         }
 
         img {
@@ -244,6 +248,12 @@ html[id=hobby] main {
             border: 10px solid black;
             border-radius: 15px;
             width: 20%;
+        }
+    }
+
+    @media only screen and (max-width: 620px) {
+        img {
+            display: none;
         }
     }
 }
@@ -288,16 +298,13 @@ html[id=inlog] main {
     border-radius: 15px;
     border: 10px solid black;
     margin: auto;
-    height: 420px;
+    height: auto;
 
     div {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: baseline;
-        align-content: center;
-        height: 300px;
+        display: grid;
+        gap: 0px;
+        grid-template-columns: 40% 60%;
+        height: auto;
 
         label,
         input {
@@ -309,7 +316,6 @@ html[id=inlog] main {
 
         input {
             border-radius: 5px;
-            width: 60%;
             margin-right: 5%;
             margin-left: 5%;
             padding: 5px;
@@ -317,22 +323,10 @@ html[id=inlog] main {
 
         label {
             text-align: right;
-            width: 25%;
             margin-right: 5%;
             height: 20px;
             padding: 5px 0 5px 0;
         }
-
-        input[type=checkbox] {
-            height: 30px;
-            width: 30px;
-        }
-    }
-
-    p {
-        text-align: right;
-        width: 30%;
-        margin-bottom: 0;
     }
 
     input {
@@ -342,8 +336,38 @@ html[id=inlog] main {
 
     input[type=submit] {
         width: 50%;
-        margin: 25px 25% 0 25%;
+        margin: 25px 25% 25px 25%;
         background-color: rgb(0, 255, 0);
+    }
+
+    @media only screen and (max-width: 620px) {
+        div {
+            grid-template-columns: auto auto;
+            gap: 0;
+
+            label {
+                text-align: left;
+                margin-left: 20px;
+                margin-bottom: 0;
+            }
+
+            input {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                margin-left: 20px;
+                margin-top: 0;
+            }
+
+            input[type=checkbox] {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                margin: auto auto 0 auto;
+                width: 30px;
+                height: 30px;
+            }
+
+        }
+
     }
 }
 
@@ -374,15 +398,16 @@ html[id=me] {
             padding: 10px;
         }
 
-        @media only screen and (max-width: 620px){
+        @media only screen and (max-width: 620px) {
             flex-direction: column;
 
-            img{
+            img {
                 width: 80%;
                 margin: auto;
                 margin-bottom: 10px;
             }
-            section{
+
+            section {
                 width: 80%;
                 margin: auto;
             }
@@ -427,5 +452,17 @@ html[id=inlog2] {
         p {
             font-size: 25px;
         }
+
+        @media only screen and (max-width: 620px) {
+            height: auto;
+            p{
+                font-size: 20px;
+            }
+            a {
+                margin-top: 50px;
+                margin-bottom: 25px;
+            }
+        }
+
     }
 }

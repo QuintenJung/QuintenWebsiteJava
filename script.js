@@ -31,7 +31,7 @@ function myFunction() {
     var submit = document.getElementById("submit");
     var firstname = document.getElementById("firstname");
     var lastname = document.getElementById("lastname");
-    console.info(checkBox.checked)
+    console.info( "checkBox;" + checkBox.checked)
     if (checkBox.checked == true && firstname.value != "" && lastname.value != "") {
         submit.style.backgroundColor = "rgb(0, 255, 0)";
     } else {

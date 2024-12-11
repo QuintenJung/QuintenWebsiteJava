@@ -5,7 +5,7 @@ moet:
 1. [all; M] dark mode maken.                    done!
 2. [index; M] cookie maken.                     done!
 3. [inlog2; S] tijdgebonden begroeting.         done!
-4. [all; L] website responsive (tel) maken.
+4. [all; L] website responsive (tel) maken.     done!!
 5. [all; L] hamburgermenu bouwen.
 6. [???; M] countdown maken.
 7. [all; ?] testen, afronden en inleveren

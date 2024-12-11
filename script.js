@@ -2,9 +2,9 @@ function load() {
     console.info("script loaded")
     if (getCookie("cookie") == "true") {
         if (getCookie("darkmode") == "true") {
-            dark_mode(false)
-        } else {
             dark_mode(true)
+        } else {
+            dark_mode(false)
         }
     }
 
@@ -76,9 +76,9 @@ function setCookie(name, value) {
 }
 function dark_mode(toggle) {
     if (toggle == undefined) {
-        toggle = (document.documentElement.style.getPropertyValue("--html") == "#3A4A64")
+        toggle = (document.documentElement.style.getPropertyValue("--html") == "white")
     }
-    if (toggle == true) {
+    if (toggle == false) {
         document.documentElement.style.setProperty('--html', 'white');
         document.documentElement.style.setProperty('--background', '#AFBEC5');
         if (getCookie("cookie") == "true") {

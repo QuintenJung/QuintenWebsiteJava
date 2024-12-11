@@ -81,17 +81,13 @@ function dark_mode(toggle) {
     if (toggle == false) {
         document.documentElement.style.setProperty('--html', 'white');
         document.documentElement.style.setProperty('--background', '#AFBEC5');
-        if (getCookie("cookie") == "true") {
-            setCookie("darkmode", "false")
-        }
+        setCookie("darkmode", "false")
         console.info("dark mode off")
     } else {
         //dark mode
         document.documentElement.style.setProperty('--html', '#3A4A64');
         document.documentElement.style.setProperty('--background', '#7A8C94');
-        if (getCookie("cookie") == "true") {
-            setCookie("darkmode", "true")
-        }
+        setCookie("darkmode", "true")
         console.info("dark mode on")
     }
 }

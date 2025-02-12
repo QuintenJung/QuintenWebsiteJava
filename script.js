@@ -7,6 +7,7 @@ function load() {
             dark_mode(false)
         }
     }
+    menu()
 }
 function cookies_deny() {
     let cookiesMelding = document.getElementById("cookies")
@@ -17,7 +18,7 @@ function cookies_accept() {
     let cookiesMelding = document.getElementById("cookies")
     console.info("cookies: accept")
     cookiesMelding.style.display = "none"
-    setCookie("cookie", "true")
+    document.cookie = "cookie = true" 
 }
 function cookie_melding() {
     if (getCookie("cookie") == "true") {

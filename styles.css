@@ -12,7 +12,6 @@ html {
 body {
     margin: 0;
 }
-
 header {
     background-color: var(--background);
     border-bottom: 10px solid black;

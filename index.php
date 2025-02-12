@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <img src="img/hamburger-menu.webp" alt="menu" id="menu" onclick="menu()">
         <nav id="menu_nav">
             <a href="index.html">Home</a>
@@ -23,11 +23,15 @@
         <p>Portfolio</p>
         <p id="countdown"></p>
         <img src="img/dark-mode.png" class="darkmode" onclick="dark_mode()">
-    </header>
+    </header> -->
+    <?php include "header.php"
+    ?>
     <main>
         <section>
             <img src="img/selfie.jpg" alt="foto">
             <p>
+                <?php echo "mijn eerste php"
+                ?>
                 Welkom op de persoonlijke pagina van Quinten Jungschlager.<br><br>
                 Op deze website ga ik jullie alles vertellen over mijzelf en laten zien wie ik ben.
             </p>
